@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "@yurkimus/server-request",
+  "version": "0.0.1",
+  "author": "yurkimus <yurkimus@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yurkimus/server-request.git"
+  },
+  "exports": {
+    ".": {
+      "import": "./source/index.js"
+    }
+  },
+  "dependencies": {
+    "@yurkimus/errors": "0.0.6"
+  }
+}
