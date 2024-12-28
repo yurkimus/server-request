@@ -10,7 +10,7 @@ export function ServerRequest(feature, input, init) {
 
   if (!ServerFeatures.has(feature))
     throw TypeError(
-      `'feature' must be presented in 'ServerFeatures'.`,
+      `feature '${feature}' must be presented in 'ServerFeatures'.`,
     )
 
   for (let property of properties)
