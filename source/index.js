@@ -1,5 +1,7 @@
 import '@yurkimus/errors'
 
+import { type } from '@yurkimus/types'
+
 export let ServerFeatures = new Map()
 
 let properties = ['fallback', 'onfulfilled']
