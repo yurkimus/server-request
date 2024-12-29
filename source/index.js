@@ -54,9 +54,13 @@ ServerRequest.prototype.onfulfilled = function([response, body]) {
 }
 
 ServerRequest.prototype.onrejected = function(reason) {
-  ServerFeatures
-    .get(this.feature)
-    .onrejected(reason)
+  switch (type(reason)) {
+    case 'AbortError':
+      throw AbortError(reason.message)
+
+    default:
+      throw reason
+  }
 }
 
 ServerRequest.prototype[Symbol.toStringTag] = 'ServerRequest'
