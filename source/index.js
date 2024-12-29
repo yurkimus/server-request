@@ -10,7 +10,7 @@ export function ServerRequest(feature, input, init) {
 
   if (!ServerFeatures.has(feature))
     throw TypeError(
-      `feature '${feature}' must be presented in 'ServerFeatures'.`,
+      `Feature property '${feature}' must be presented in 'ServerFeatures'.`,
     )
 
   for (let property of properties)
@@ -22,7 +22,7 @@ export function ServerRequest(feature, input, init) {
   for (let property of properties)
     if (typeof ServerFeatures.get(feature)[property] !== 'function')
       throw TypeError(
-        `'feature' properties must be [[Callable]].`,
+        `Feature property '${property}' must be [[Callable]].`,
       )
 
   this.feature = feature
