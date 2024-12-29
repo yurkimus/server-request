@@ -2,7 +2,7 @@ import '@yurkimus/errors'
 
 export let ServerFeatures = new Map()
 
-let properties = ['fallback', 'onfulfilled', 'onrejected']
+let properties = ['fallback', 'onfulfilled']
 
 export function ServerRequest(feature, input, init) {
   if (!(this instanceof ServerRequest))
